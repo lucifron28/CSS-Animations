@@ -1,0 +1,50 @@
+.inputBox {
+    position: relative;
+    margin: 20px; /* Added some margin for spacing */
+}
+
+.inputBox input {
+    width: 100%; /* Make input take full width */
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ee8456;
+    color: #fff;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+}
+
+.inputBox span {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: 0.4s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.inputBox input:focus ~ span, 
+.inputBox input:valid ~ span {
+    top: 0px; /* Move the label to the top */
+    left: 10px; /* Adjust the label to the left */
+    font-size: 0.7em;
+    transform: translateY(-50%); /* Move label above the input field */
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+}
+
+body {
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
